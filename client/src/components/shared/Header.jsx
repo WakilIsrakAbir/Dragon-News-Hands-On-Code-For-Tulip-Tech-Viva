@@ -5,10 +5,10 @@ import { format } from "date-fns";
 import { useEffect, useState } from "react";
 
 const Header = () => {
-    const [currentDate, setCurrentDate] = useState("");
-    useEffect(() => {
-        setCurrentDate(format(new Date(), "EEEE, MMM dd, yyyy"));
-    }, []);
+  const [currentDate, setCurrentDate] = useState("");
+  useEffect(() => {
+    setCurrentDate(format(new Date(), "EEEE, MMM dd, yyyy"));
+  }, []);
   return (
     <div className="text-center my-8 space-y-2">
       <Image
