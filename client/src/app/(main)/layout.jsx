@@ -1,6 +1,6 @@
-import Header from '@/components/Header'
-import Navbar from '@/components/Navbar'
-import React from 'react'
+import Header from "@/components/shared/Header";
+import Navbar from "@/components/shared/Navbar";
+import React from "react";
 
 const MainLayout = ({ children }) => {
   return (
@@ -9,7 +9,7 @@ const MainLayout = ({ children }) => {
       <Navbar />
       {children}
     </div>
-  )
-}
+  );
+};
 
-export default MainLayout
+export default MainLayout;
