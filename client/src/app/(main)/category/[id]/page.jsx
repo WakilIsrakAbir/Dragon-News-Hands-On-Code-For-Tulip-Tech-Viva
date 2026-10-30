@@ -1,10 +1,13 @@
 import LeftSidebar from "@/components/Homepage/news/LeftSidebar";
+import NewsCard from "@/components/Homepage/news/NewsCard";
 import RightSidebar from "@/components/Homepage/news/RightSidebar";
 import { getCategories, getNewsByCategoryId } from "@/lib/data";
 
+export const instant = false;
+
 const NewsCatagoryPage = async ({ params }) => {
   const { id } = await params;
-  console.log(id, "id");
+  // console.log(id, "id");
 
   const categories = await getCategories();
   // console.log(categories.news_category);
@@ -26,9 +29,8 @@ const NewsCatagoryPage = async ({ params }) => {
           {news.length > 0 ? (
             news.map((n) => {
               return (
-                <div key={n._id} className="p-2 rounded-2xl bg-blue-100">
-                  {n.title}
-                </div>
+                <NewsCard news={n}  key={n._id} >
+                </NewsCard>
               );
             })
           ) : (
