@@ -1,10 +1,12 @@
 import Navbar from "@/components/shared/Navbar";
-import React from "react";
+import React, { Suspense } from "react";
 
 const AuthLayout = ({ children }) => {
   return (
     <div>
-      <Navbar></Navbar>
+      <Suspense fallback={null}>
+        <Navbar></Navbar>
+      </Suspense>
       {children}
     </div>
   );
