@@ -4,6 +4,10 @@ import Link from "next/link";
 import React from "react";
 import { FaArrowLeft } from "react-icons/fa";
 
+export const metadata = {
+  title: "Dragon News - Details",
+};
+
 export const instant = false;
 
 const NewsDetailsPage = async ({ params }) => {
